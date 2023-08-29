@@ -24,5 +24,16 @@ public class UserValidationTest {
         Assert.assertFalse(result);
     }
 
+    @Test
+    public void givenLastName_WhenProper_ShouldReturnTrue(){
+        boolean result = user.validateLastName("Madan");
+        Assert.assertTrue(result);
+    }
+
+    @Test
+    public void givenLastName_WhenNotProper_ShouldReturnFalse(){
+        boolean result = user.validateLastName("Madan");
+        Assert.assertFalse(result);
+    }
 
 }
