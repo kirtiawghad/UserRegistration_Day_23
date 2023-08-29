@@ -36,4 +36,16 @@ public class UserValidationTest {
         Assert.assertFalse(result);
     }
 
+    @Test
+    public void givenEmailId_WhenProper_ShouldReturnTrue(){
+        boolean result = user.validateEmailId("abcxyz@bridgelabz.co.on");
+        Assert.assertTrue(result);
+    }
+
+    @Test
+    public void givenEmailId_WhenNotProper_ShouldReturnFalse(){
+        boolean result = user.validateEmailId("abc@xyz@bridgelabz.co.on");
+        Assert.assertFalse(result);
+    }
+
 }
